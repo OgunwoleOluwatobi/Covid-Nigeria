@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb://Archie:oluwatstar@new-shard-00-00-fmjcw.mongodb.net:27017,new-shard-00-01-fmjcw.mongodb.net:27017,new-shard-00-02-fmjcw.mongodb.net:27017/covidapi?ssl=true&replicaSet=New-shard-0&authSource=admin&retryWrites=true&w=majority",
+    "jwtSecret": "CovidApi_1244"
+}
