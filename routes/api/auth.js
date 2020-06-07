@@ -15,6 +15,12 @@ const Token = require('../../models/Token');
 
 router.post('/', (req, res) => {
     const { name, email, password } = req.body;
+    var emailRegex = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+    var valid = emailRegex.test(email);
+
+    if(!valid) {
+        return res.status(400).json({ msg: 'Invalid Email' });
+    }
 
     if(!email || !password) {
         return res.status(400).json({msg: 'Please Enter all Fields'});
@@ -30,7 +36,6 @@ router.post('/', (req, res) => {
                     jwt.sign(
                         { id: user.id },
                         config.get('jwtSecret'),
-                        { expiresIn: 3600 },
                         (err, token) => {
                             res.json({
                                 token,
@@ -38,7 +43,7 @@ router.post('/', (req, res) => {
                                     id: user.id,
                                     name: user.name,
                                     email: user.email,
-                                    apiToken: user.token,
+                                    token: user.token,
                                 }
                             });
                         }

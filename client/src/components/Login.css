@@ -45,6 +45,11 @@ button {
     transition: transform 80ms ease-in;
 }
 
+button:disabled,
+button[disabled] {
+    border: none;
+    background-color: grey;
+}
 button:active {
     transform: scale(0.95);
 }
@@ -71,7 +76,6 @@ form {
 
 input {
     background-color: #eee;
-    border: none;
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
@@ -98,9 +102,8 @@ input {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
     overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 480px;
+    width: 100%;
+    height: 480px;
 }
 
 .form-container {
@@ -155,7 +158,7 @@ input {
     width: 40%;
     height: 100%;
     overflow: hidden;
-    transition: transform 0.6s 
+    transition: transform 0.6s;
 }
 
 .overlay-container-up {
@@ -166,7 +169,6 @@ input {
     height: 100%;
     overflow: hidden;
     transition: transform 0.6s ease-in-out;
-    z-index: 100;
 }
 
 .container.right-panel-active .overlay-container {

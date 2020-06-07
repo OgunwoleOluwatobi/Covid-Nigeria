@@ -11,9 +11,9 @@ import {
 
 const initialState = {
     token: localStorage.getItem('token'),
-    isAuth: null,
+    isAuth: false,
     isLoading: false,
-    user: null
+    user: null,
 }
 
 export default function(state = initialState, action) {

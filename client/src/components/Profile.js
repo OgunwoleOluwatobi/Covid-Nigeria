@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { Redirect, Route } from 'react-router-dom';
 import { loadUser } from '../actions/authActions';
-import { theme } from '../styles';
+import { theme, media } from '../styles';
 const { colors } = theme;
 
 const Container = styled.div`
@@ -26,10 +26,14 @@ const Holder = styled.div`
     justify-content: flex-start;
     width: 500px;
     margin-bottom: 30px;
+    ${media.thone`
+        width: 100%;
+        padding: 0 1.5rem;
+    `}
 `;
 
 const AreaInput = styled.input`
-    width: 500px;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     border: 1px solid #ccc;
@@ -39,7 +43,7 @@ const AreaInput = styled.input`
     word-wrap: break-word;
 `
 const TokenInput = styled.textarea`
-    width: 500px;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     font-size: 18px;
@@ -49,6 +53,9 @@ const TokenInput = styled.textarea`
     box-sizing: border-box;
     resize: none;
     min-height: 100px;
+    ${media.phablet`
+        min-height: 150px;
+    `}
 `;
 
 class Profile extends Component {

@@ -12,7 +12,6 @@ import {
 } from './types';
 
 export const loadUser = () => (dispatch, getState) => {
-    console.log('here');
     dispatch({type: USER_LOADING});
 
     axios.get('/api/auth/user', tokenConfig(getState))//token config header helper below

@@ -1,18 +1,27 @@
+import { hex2rgba } from '../utils';
 
 const DARK_BG = '#14181E';
 const ACCENT = '#4DC932';
-const SHADOW = '#000000';
-const KWITE = '#D3CDC6';
-const PaleGreen = '#46B29D';
+const BLACK = '#000000';
+const KBLACK = '#444444';
+const WHITE = '#FFFFFF';
+const PALE = '#46B29D';
 
 const theme = {
     colors: {
         darkBlue: DARK_BG,
         green: ACCENT,
-        white: '#FFFFFF',
-        dustyWhite: '#C0C0C0',
+        white: WHITE,
+        dustyWhite: '#303030',
         hamblue: '#181D23',
-        PaleGreen: '#46B29D'
+        deepPale: '#65DDB9',
+        darkPale: '#14A085',
+        PaleGreen: PALE,
+        dull: KBLACK,
+        shadowBlack: hex2rgba(WHITE, 0.9),
+        backBlack: hex2rgba(BLACK, 0.2),
+        bgPale: hex2rgba(PALE, 0.2),
+        shadowPale: hex2rgba(PALE, 0.5)
     },
 
     fonts: {
@@ -40,7 +49,7 @@ const theme = {
     hamAfter: `bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19)`,
     hamAfterActive: `bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s`,
 
-    navHeight: '100px',
+    navHeight: '80px',
     navScrollHeight: '70px',
     navDelay: 1000,
     loaderDelay: 2000
