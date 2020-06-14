@@ -199,7 +199,7 @@ const ApiHold = styled.div`
     height: 630px;
   `}
   ${media.phablet`
-    height: 380px;
+    height: 430px;
   `}
   ${media.phone`
     height: 380px;
