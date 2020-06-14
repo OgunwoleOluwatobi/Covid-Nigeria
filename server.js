@@ -2,11 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const config = require('config');
-var forceSsl = require('force-ssl-heroku');
+//var forceSsl = require('force-ssl-heroku');
 
 const app = express();
 
-app.use(forceSsl);
+//app.use(forceSsl);
 app.use(express.json());
 
 const db = config.get('mongoURI');
