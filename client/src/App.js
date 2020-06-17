@@ -21,7 +21,7 @@ class App extends Component {
     this.props.onTryAutoSignIn();
     const fetchData = async () => {
       const db = firebase.firestore();
-      const dat = await db.collection("total").orderBy("data", "desc").limit(7).get();
+      const dat = await db.collection("total").orderBy("id", "desc").limit(7).get();
       const total = [];
       const tdays = [];
       dat.docs.map(doc => 
