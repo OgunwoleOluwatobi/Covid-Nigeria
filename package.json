@@ -22,7 +22,7 @@
     "emailjs": "^3.0.0",
     "express": "^4.17.1",
     "force-ssl-heroku": "^1.0.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mailgun-js": "^0.22.0",
     "mongoose": "^5.9.16",
     "nodemailer": "^6.4.8"
